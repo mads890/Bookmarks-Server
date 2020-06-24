@@ -1,8 +1,16 @@
 const app = require('./app')
-const { PORT } = require('./config')
+const { PORT, DB_URL } = require('./config')
+const knex = require('knex')
 
-const PORT = process.env.PORT || 8000
+const db = knex({
+    client: 'pg',
+    connection: DB_URL,
+})
 
-app.listen(PORT, () => {
+app.set('db', db)
+
+const port = process.env.PORT || 8000
+
+app.listen(port, () => {
     console.log(`listening on ${PORT}`)
 })
