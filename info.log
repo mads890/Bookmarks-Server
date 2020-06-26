@@ -91,3 +91,13 @@
 {"message":"rating must be a valid integer between 1-5","level":"error"}
 {"message":"bookmark with id 1 created","level":"info"}
 {"message":"bookmark with id 12345 not found","level":"error"}
+{"message":"bookmark with id 2 not found","level":"error"}
+{"message":"bookmark with id 2 not found","level":"error"}
+{"message":"bookmark with id 2 not found","level":"error"}
+{"message":"Cannot destructure property 'title' of 'req.body' as it is undefined.","level":"error"}
+{"message":"Cannot destructure property 'title' of 'req.body' as it is undefined.","level":"error"}
+{"message":"Cannot destructure property 'title' of 'req.body' as it is undefined.","level":"error"}
+{"message":"bookmark with id 2 not found","level":"error"}
+{"message":"Cannot destructure property 'title' of 'req.body' as it is undefined.","level":"error"}
+{"message":"Cannot destructure property 'title' of 'req.body' as it is undefined.","level":"error"}
+{"message":"Cannot destructure property 'title' of 'req.body' as it is undefined.","level":"error"}

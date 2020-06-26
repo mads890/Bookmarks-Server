@@ -3,14 +3,14 @@ const { v4: uuid } = require('uuid')
 const logger = require('../logger')
 const { bookmarks } = require('../store')
 const { isWebUri } = require('valid-url')
-const BookmarksService = require('../bookmarks-service')
+const BookmarksService = require('./bookmarks-service')
 const xss = require('xss')
 
 const bookmarksRouter = express.Router()
 const bodyParser = express.json()
 
 bookmarksRouter
-    .route('/bookmarks')
+    .route('/api/bookmarks')
     .get((req, res, next) => {
         BookmarksService.getAllBookmarks(req.app.get('db'))
         .then(bookmarks => {
@@ -54,13 +54,13 @@ bookmarksRouter
         BookmarksService.insertBookmark(req.app.get('db'), bookmark)
             .then(bookmark => {
                 logger.info(`bookmark with id ${bookmark.id} created`)
-                return res.status(201).location(`/bookmarks/${bookmark.id}`).json(bookmark)
+                return res.status(201).location(`/api/bookmarks/${bookmark.id}`).json(bookmark)
             })
             .catch(next)
     })
 
 bookmarksRouter
-    .route('/bookmarks/:id')
+    .route('/api/bookmarks/:id')
     .all((req, res, next) => {
         const { id } = req.params
         BookmarksService.getBookmarkById(req.app.get('db'), id)
@@ -97,6 +97,25 @@ bookmarksRouter
                 res.status(204).end()
             })
             .catch(next)    
+    })
+    .patch((req, res, next) => {
+        const { title, url, description, rating } = req.body
+        const ratingNum = Number(rating)
+        if(Number.isNaN(ratingNum) || !Number.isInteger(ratingNum) || ratingNum < 0 || ratingNum > 5) {
+            logger.error('rating must be a valid integer between 1-5')
+            return res.status(400).send('invalid data')
+        }
+        if(!isWebUri(url)) {
+            logger.error(`invalid url ${url}`)
+            res.status(400).send('invalid data')
+        }
+        const updatedBookmark = { title: xss(title), url, description: xss(description), ratingNum, }
+        BookmarksService.updateBookmark(req.app.get('db'), req.params.id, updatedBookmark)
+            .then(data => {
+                logger.info(`bookmark with id ${id} updated`)
+                res.status(204).end()
+            })
+            .catch(next)
     })
 
 module.exports = bookmarksRouter
