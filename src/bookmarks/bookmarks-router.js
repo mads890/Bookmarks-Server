@@ -98,10 +98,14 @@ bookmarksRouter
             })
             .catch(next)    
     })
-    .patch((req, res, next) => {
+    .patch(bodyParser, (req, res, next) => {
         const { title, url, description, rating } = req.body
         const ratingNum = Number(rating)
-        if(Number.isNaN(ratingNum) || !Number.isInteger(ratingNum) || ratingNum < 0 || ratingNum > 5) {
+        if(!req.params.id) {
+                logger.error('id is required')
+                return res.status(404).json({ error: {message: 'not found'}})
+            }
+        if(!Number.isInteger(ratingNum) || ratingNum < 0 || ratingNum > 5) {
             logger.error('rating must be a valid integer between 1-5')
             return res.status(400).send('invalid data')
         }
@@ -109,10 +113,10 @@ bookmarksRouter
             logger.error(`invalid url ${url}`)
             res.status(400).send('invalid data')
         }
-        const updatedBookmark = { title: xss(title), url, description: xss(description), ratingNum, }
+        const updatedBookmark = { title: xss(title), url, description: xss(description), rating: ratingNum }
         BookmarksService.updateBookmark(req.app.get('db'), req.params.id, updatedBookmark)
             .then(data => {
-                logger.info(`bookmark with id ${id} updated`)
+                logger.info(`bookmark with id ${req.params.id} updated`)
                 res.status(204).end()
             })
             .catch(next)

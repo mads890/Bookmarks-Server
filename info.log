@@ -105,3 +105,91 @@
 {"message":"Cannot destructure property 'title' of 'req.body' as it is undefined.","level":"error"}
 {"message":"Cannot destructure property 'title' of 'req.body' as it is undefined.","level":"error"}
 {"message":"Cannot destructure property 'title' of 'req.body' as it is undefined.","level":"error"}
+{"message":"bookmark with id 2 not found","level":"error"}
+{"message":"update \"bookmarks\" set \"title\" = $1, \"url\" = $2, \"description\" = $3, \"ratingNum\" = $4 where \"id\" = $5 - column \"ratingNum\" of relation \"bookmarks\" does not exist","level":"error"}
+{"message":"rating must be a valid integer between 1-5","level":"error"}
+{"message":"rating must be a valid integer between 1-5","level":"error"}
+{"message":"bookmark with id 2 not found","level":"error"}
+{"message":"id is not defined","level":"error"}
+{"message":"rating must be a valid integer between 1-5","level":"error"}
+{"message":"rating must be a valid integer between 1-5","level":"error"}
+{"message":"bookmark with id 2 not found","level":"error"}
+{"message":"bookmark with id 2 updated","level":"info"}
+{"message":"rating must be a valid integer between 1-5","level":"error"}
+{"message":"rating must be a valid integer between 1-5","level":"error"}
+{"message":"bookmark with id 2 not found","level":"error"}
+{"message":"bookmark with id 2 updated","level":"info"}
+{"message":"invalid url undefined","level":"error"}
+{"message":"update \"bookmarks\" set \"title\" = $1, \"description\" = $2, \"rating\" = $3 where \"id\" = $4 - invalid input syntax for type integer: \"NaN\"","level":"error"}
+{"message":"invalid url undefined","level":"error"}
+{"message":"update \"bookmarks\" set \"title\" = $1, \"description\" = $2, \"rating\" = $3 where \"id\" = $4 - invalid input syntax for type integer: \"NaN\"","level":"error"}
+{"message":"bookmark with id 2 not found","level":"error"}
+{"message":"bookmark with id 2 updated","level":"info"}
+{"message":"rating must be a valid integer between 1-5","level":"error"}
+{"message":"rating must be a valid integer between 1-5","level":"error"}
+{"message":"bookmark with id 2 not found","level":"error"}
+{"message":"bookmark with id 2 updated","level":"info"}
+{"message":"rating must be a valid integer between 1-5","level":"error"}
+{"message":"rating must be a valid integer between 1-5","level":"error"}
+{"message":"bookmark with id 2 not found","level":"error"}
+{"message":"bookmark with id 2 updated","level":"info"}
+{"message":"rating must be a valid integer between 1-5","level":"error"}
+{"message":"rating must be a valid integer between 1-5","level":"error"}
+{"message":"bookmark with id 2 not found","level":"error"}
+{"message":"bookmark with id 2 updated","level":"info"}
+{"message":"rating must be a valid integer between 1-5","level":"error"}
+{"message":"rating must be a valid integer between 1-5","level":"error"}
+{"message":"bookmark with id 2 not found","level":"error"}
+{"message":"rating must be a valid integer between 1-5","level":"error"}
+{"message":"rating must be a valid integer between 1-5","level":"error"}
+{"message":"rating must be a valid integer between 1-5","level":"error"}
+{"message":"bookmark with id 2 not found","level":"error"}
+{"message":"bookmark with id 2 updated","level":"info"}
+{"message":"rating must be a valid integer between 1-5","level":"error"}
+{"message":"rating must be a valid integer between 1-5","level":"error"}
+{"message":"bookmark with id 2 not found","level":"error"}
+{"message":"bookmark with id 2 updated","level":"info"}
+{"message":"rating must be a valid integer between 1-5","level":"error"}
+{"message":"rating must be a valid integer between 1-5","level":"error"}
+{"message":"bookmark with id 2 not found","level":"error"}
+{"message":"bookmark with id 2 updated","level":"info"}
+{"message":"rating must be a valid integer between 1-5","level":"error"}
+{"message":"rating must be a valid integer between 1-5","level":"error"}
+{"message":"bookmark with id 2 not found","level":"error"}
+{"message":"bookmark with id 2 updated","level":"info"}
+{"message":"rating must be a valid integer between 1-5","level":"error"}
+{"message":"rating must be a valid integer between 1-5","level":"error"}
+{"message":"bookmark with id 2 not found","level":"error"}
+{"message":"bookmark with id 2 updated","level":"info"}
+{"message":"rating must be a valid integer between 1-5","level":"error"}
+{"message":"rating must be a valid integer between 1-5","level":"error"}
+{"message":"bookmark with id 2 not found","level":"error"}
+{"message":"rating must be a valid integer between 1-5","level":"error"}
+{"message":"rating must be a valid integer between 1-5","level":"error"}
+{"message":"bookmark with id 2 not found","level":"error"}
+{"message":"bookmark with id 2 updated","level":"info"}
+{"message":"rating must be a valid integer between 1-5","level":"error"}
+{"message":"rating must be a valid integer between 1-5","level":"error"}
+{"message":"bookmark with id 2 not found","level":"error"}
+{"message":"bookmark with id 2 updated","level":"info"}
+{"message":"rating must be a valid integer between 1-5","level":"error"}
+{"message":"rating must be a valid integer between 1-5","level":"error"}
+{"message":"bookmark with id 12345 not found","level":"error"}
+{"message":"bookmark with id 2 updated","level":"info"}
+{"message":"rating must be a valid integer between 1-5","level":"error"}
+{"message":"rating must be a valid integer between 1-5","level":"error"}
+{"message":"bookmark with id 12345 not found","level":"error"}
+{"message":"bookmark with id 2 updated","level":"info"}
+{"message":"rating must be a valid integer between 1-5","level":"error"}
+{"message":"rating must be a valid integer between 1-5","level":"error"}
+{"message":"bookmark with id 12345 not found","level":"error"}
+{"message":"bookmark with id 2 updated","level":"info"}
+{"message":"rating must be a valid integer between 1-5","level":"error"}
+{"message":"rating must be a valid integer between 1-5","level":"error"}
+{"message":"bookmark with id 12345 not found","level":"error"}
+{"message":"bookmark with id 2 updated","level":"info"}
+{"message":"rating must be a valid integer between 1-5","level":"error"}
+{"message":"rating must be a valid integer between 1-5","level":"error"}
+{"message":"rating must be a valid integer between 1-5","level":"error"}
+{"message":"invalid url some-invalid-url","level":"error"}
+{"message":"bookmark with id 2 updated","level":"info"}
