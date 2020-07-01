@@ -16,7 +16,7 @@ app.use(morgan(morganUse))
 app.use(helmet())
 app.use(cors())
 
-// app.use(validateBearerToken)
+app.use(validateBearerToken)
 
 app.get('/', (req, res) => {
     res.send('it works!')
